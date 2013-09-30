@@ -1,14 +1,14 @@
 return {
   name='Scenario Editor BA',
   description='Scenario Editor for Balanced Annihilation',
-  shortname='SE BA',
-  version='0.1',
+  shortname='SE_BA',
+  version='0.2',
   mutator='Official',
   game='Scenario Editor BA',
-  shortGame='SE BA',
+  shortGame='SE_BA',
   modtype=1,
   depend = {
-	'Scenario Editor Core 0.1',
+	'Scenario Editor Core 0.2',
 	'Balanced Annihilation V7.78'
   },
 }

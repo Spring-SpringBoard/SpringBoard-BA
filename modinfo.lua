@@ -8,7 +8,7 @@ return {
   shortGame='SE_BA',
   modtype=1,
   depend = {
-	'Scenario Editor Core 0.2+',
     'Balanced Annihilation test-2491',
+	'Scenario Editor Core 0.2+',
   },
 }

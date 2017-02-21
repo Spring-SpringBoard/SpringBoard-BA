@@ -1,14 +1,13 @@
 return {
-  name='Scened BA',
-  description='Scened for Balanced Annihilation',
-  shortname='SE_BA',
+  name='SpringBoard BA',
+  description='SpringBoard for Balanced Annihilation',
+  shortname='SB_BA',
   version='git',
   mutator='Official',
-  game='Scened BA',
-  shortGame='SE_BA',
   modtype=1,
   depend = {
-    'rapid://ba:stable',
-	'Scened Core git'
+--	'Balanced Annihilation V9.54',
+	'rapid://ba:stable',
+	'SpringBoard Core git'
   },
 }

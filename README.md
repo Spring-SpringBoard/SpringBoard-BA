@@ -2,7 +2,7 @@ Check [SpringBoard-Core](https://github.com/Spring-SpringBoard/SpringBoard-Core)
 
 # Installation
 
-Get Balanced Annihilation stable with `pr-downloader ba:stable` and SpringBoard Ba test with `pr-downloader sb-ba:test`.
+Get Balanced Annihilation stable with `pr-downloader ba:stable` and SpringBoard BA test with `pr-downloader sb-ba:test`.
 
 ## Development
 

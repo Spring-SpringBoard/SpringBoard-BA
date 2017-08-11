@@ -28,7 +28,9 @@ include("savetable.lua")
 local gl = gl
 
 local CONFIG_FILENAME    = LUAUI_DIRNAME .. 'Config/' .. Game.modShortName .. '.lua'
-local WIDGET_DIRNAME     = LUAUI_DIRNAME .. 'Widgets/'
+local WIDGET_DIRNAME     = LUAUI_DIRNAME .. 'Widgets_BA/'
+-- hack so SpringBoard's widgets also get loaded
+local SB_WIDGET_DIRNAME  = LUAUI_DIRNAME .. 'widgets/'
 
 local SELECTOR_BASENAME = 'selector.lua'
 
@@ -337,6 +339,9 @@ function widgetHandler:Initialize()
 
   -- stuff the raw widgets into unsortedWidgets
   local widgetFiles = VFS.DirList(WIDGET_DIRNAME, "*.lua", VFS.RAW_ONLY)
+  for _, wf in pairs(VFS.DirList(SB_WIDGET_DIRNAME, "*.lua", VFS.RAW_ONLY)) do
+      table.insert(widgetFiles, wf)
+  end
   for k,wf in ipairs(widgetFiles) do
     GetWidgetInfo(wf, VFS.RAW_ONLY)
     local widget = self:LoadWidget(wf, false)
@@ -347,6 +352,9 @@ function widgetHandler:Initialize()
 
   -- stuff the zip widgets into unsortedWidgets
   local widgetFiles = VFS.DirList(WIDGET_DIRNAME, "*.lua", VFS.ZIP_ONLY)
+  for _, wf in pairs(VFS.DirList(SB_WIDGET_DIRNAME, "*.lua", VFS.ZIP_ONLY)) do
+      table.insert(widgetFiles, wf)
+  end
   for k,wf in ipairs(widgetFiles) do
     GetWidgetInfo(wf, VFS.ZIP_ONLY)
     local widget = self:LoadWidget(wf, true)

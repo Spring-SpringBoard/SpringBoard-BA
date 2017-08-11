@@ -8,8 +8,13 @@ return {
   mutator = 'Official',
   modtype = 1,
   depend = {
-	'rapid://ba:stable',
+    -- Order matters. Putting game second ensures its widget/gadget handler is loaded
+
     'rapid://sbc:test',
     --'SpringBoard Core $VERSION',
+
+
+    'rapid://ba:test',
+    --'Balanced Annihilation $VERSION',
   },
 }

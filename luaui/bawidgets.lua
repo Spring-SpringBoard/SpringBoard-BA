@@ -149,6 +149,7 @@ local flexCallIns = {
   'DrawWorldReflection',
   'DrawWorldRefraction',
   'DrawScreenEffects',
+  'DrawScreenPost',
   'DrawInMiniMap',
   'FeatureCreated',
   'FeatureDestroyed',
@@ -1280,6 +1281,12 @@ function widgetHandler:DrawScreenEffects(vsx, vsy)
   return
 end
 
+function widgetHandler:DrawScreenPost(vsx, vsy)
+  for _,w in ripairs(self.DrawScreenPostList) do
+    w:DrawScreenPost(vsx, vsy)
+  end
+  return
+end
 
 function widgetHandler:DrawInMiniMap(xSize, ySize)
   for _,w in ripairs(self.DrawInMiniMapList) do

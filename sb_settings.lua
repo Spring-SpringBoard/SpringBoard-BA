@@ -1,6 +1,6 @@
 local UIWidgets = {"AdvPlayersList", "AdvPlayersList info", "AdvPlayersList lockcamera",
-                   "Red Tooltip", "Keybind/Mouse Info", "Options", "Commands info",
-                    "Top Bar"}
+                   "Red Tooltip", "Red Minimap",
+                   "Keybind/Mouse Info", "Options", "Commands info", "Top Bar"}
 
 return {
     startStop = {
@@ -20,6 +20,7 @@ return {
         end
         Spring.SendCommands("tooltip 0")
         Spring.SendCommands("resbar 0")
+        gl.SlaveMiniMap(true)
     end,
 
     OnStartEditingSynced = function()
